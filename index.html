@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WordPuzzle - Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-page">
+
+    <div class="login-wrapper">
+
+        <!-- LEFT SIDE -->
+        <div class="login-visual">
+
+            <div class="brand">
+                🧩 <span>Word<span class="brand-purple">Puzzle</span></span>
+            </div>
+
+            <div class="visual-content">
+
+                <div class="bulb">💡</div>
+
+                <div class="word-block">
+                    <span>W</span>
+                    <span>O</span>
+                    <span>R</span>
+                    <span>D</span>
+                </div>
+
+                <div class="word-block second">
+                    <span>P</span>
+                    <span>U</span>
+                    <span>Z</span>
+                    <span>Z</span>
+                    <span>L</span>
+                    <span>E</span>
+                </div>
+
+                <p>Challenge your mind,<br>one word at a time!</p>
+
+            </div>
+
+            <div class="visual-decoration circle-one"></div>
+            <div class="visual-decoration circle-two"></div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="login-section">
+
+            <div class="login-card">
+
+                <h1>Welcome Back!</h1>
+
+                <p class="login-subtitle">
+                    Log in to continue your word puzzle journey.
+                </p>
+
+
+                <form id="loginForm">
+
+                    <label>Email address</label>
+
+                    <div class="input-box">
+                        <span>✉️</span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Email address"
+                            required
+                        >
+                    </div>
+
+
+                    <label>Password</label>
+
+                    <div class="input-box">
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Password"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <label for="terms">
+                            I agree to the
+                            <a href="#">Terms & Conditions</a>
+                            and
+                            <a href="#">Privacy Policy</a>
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn login-btn"
+                    >
+                        Login
+                    </button>
+
+                </form>
+
+
+                <p id="loginMessage" class="message"></p>
+
+
+                <div class="create-account">
+
+                    Don't have an account?
+
+                    <a href="#" onclick="createAccount()">
+                        Create Account
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>

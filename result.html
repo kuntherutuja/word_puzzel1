@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>WordPuzzle - Winner</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body class="winner-page">
+
+
+    <div class="winner-decoration decoration-1">
+        ✦
+    </div>
+
+    <div class="winner-decoration decoration-2">
+        ★
+    </div>
+
+    <div class="winner-decoration decoration-3">
+        ◆
+    </div>
+
+
+    <div class="winner-card">
+
+
+        <div class="trophy">
+            🏆
+        </div>
+
+
+        <h1>
+            Congratulations!
+        </h1>
+
+
+        <h2>
+            You are a Word Puzzle Champion! 🎉
+        </h2>
+
+
+        <p>
+            You successfully completed all 3 rounds!
+        </p>
+
+
+        <div class="final-score">
+
+            <span>
+                Final Score
+            </span>
+
+            <strong id="finalScore">
+                0
+            </strong>
+
+            ⭐
+
+        </div>
+
+
+        <div class="winner-buttons">
+
+            <button
+                onclick="playAgain()"
+                class="primary-btn"
+            >
+                ↻ Play Again
+            </button>
+
+
+            <button
+                onclick="goDashboard()"
+                class="outline-btn"
+            >
+                🏠 Go to Dashboard
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        const score =
+            localStorage.getItem("finalScore") || 0;
+
+        document.getElementById("finalScore")
+            .innerText = score;
+
+
+        function playAgain() {
+
+            localStorage.setItem("score", "0");
+
+            window.location.href =
+                "game.html";
+
+        }
+
+
+        function goDashboard() {
+
+            window.location.href =
+                "dashboard.html";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

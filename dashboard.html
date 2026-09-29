@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>WordPuzzle - Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body class="main-page">
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🧩 Word<span>Puzzle</span>
+        </div>
+
+
+        <div class="nav-right">
+
+            <div class="user-info">
+                👤
+                <span id="userEmail"></span>
+            </div>
+
+            <button
+                class="logout-btn"
+                onclick="logout()"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- DASHBOARD -->
+
+    <main class="dashboard">
+
+
+        <!-- WELCOME CARD -->
+
+        <section class="welcome-card">
+
+            <div class="welcome-text">
+
+                <h1>
+                    Hello, Player! 👋
+                </h1>
+
+                <p>
+                    Ready to test your vocabulary skills?
+                </p>
+
+                <button
+                    class="primary-btn start-game-btn"
+                    onclick="startGame()"
+                >
+                    ▶ Start Game
+                </button>
+
+            </div>
+
+
+            <div class="welcome-image">
+
+                <div class="brain">🧠</div>
+
+                <div class="books">
+                    📚
+                </div>
+
+                <div class="sparkle">
+                    ✨
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- GAME LEVELS -->
+
+        <section class="levels-section">
+
+            <div class="section-heading">
+
+                <h2>
+                    Game Levels
+                </h2>
+
+                <p>
+                    Complete all 3 rounds to become a
+                    Word Puzzle Champion!
+                </p>
+
+            </div>
+
+
+            <div class="level-grid">
+
+
+                <!-- ROUND 1 -->
+
+                <div class="level-card easy-card">
+
+                    <div class="level-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Round 1
+                    </h3>
+
+                    <div class="difficulty easy">
+                        Easy
+                    </div>
+
+                    <p>
+                        Basic and simple words
+                    </p>
+
+                    <span>
+                        5 Questions
+                    </span>
+
+                    <button
+                        onclick="startGame()"
+                        class="level-btn easy-btn"
+                    >
+                        Start
+                    </button>
+
+                </div>
+
+
+
+                <!-- ROUND 2 -->
+
+                <div class="level-card medium-card">
+
+                    <div class="level-icon">
+                        🔥
+                    </div>
+
+                    <h3>
+                        Round 2
+                    </h3>
+
+                    <div class="difficulty medium">
+                        Medium
+                    </div>
+
+                    <p>
+                        Think carefully to solve
+                    </p>
+
+                    <span>
+                        5 Questions
+                    </span>
+
+                    <button
+                        onclick="startGame()"
+                        class="level-btn medium-btn"
+                    >
+                        Start
+                    </button>
+
+                </div>
+
+
+
+                <!-- ROUND 3 -->
+
+                <div class="level-card hard-card">
+
+                    <div class="level-icon">
+                        🏆
+                    </div>
+
+                    <h3>
+                        Round 3
+                    </h3>
+
+                    <div class="difficulty hard">
+                        Hard
+                    </div>
+
+                    <p>
+                        Challenge your vocabulary
+                    </p>
+
+                    <span>
+                        5 Questions
+                    </span>
+
+                    <button
+                        onclick="startGame()"
+                        class="level-btn hard-btn"
+                    >
+                        Start
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>WordPuzzle - Game</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body class="main-page">
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🧩 Word<span>Puzzle</span>
+        </div>
+
+
+        <div class="nav-right">
+
+            <div class="score-display">
+                ⭐ Score:
+                <strong id="score">
+                    0
+                </strong>
+            </div>
+
+            <div class="profile-icon">
+                👤
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- GAME -->
+
+    <main class="game-page">
+
+
+        <!-- ROUND HEADER -->
+
+        <div class="game-top">
+
+
+            <div class="round-info">
+
+                <span
+                    id="roundName"
+                    class="round-label"
+                >
+                    Round 1
+                </span>
+
+                <span
+                    id="difficulty"
+                    class="difficulty easy"
+                >
+                    Easy
+                </span>
+
+            </div>
+
+
+            <div class="question-info">
+
+                <span id="questionNumber">
+                    Question 1 / 5
+                </span>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress"
+                        class="progress-fill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PUZZLE CARD -->
+
+        <section class="puzzle-card">
+
+
+            <h1>
+                Unscramble the Word
+            </h1>
+
+
+            <p class="instruction">
+                Arrange the letters to make a correct word.
+            </p>
+
+
+
+            <!-- SCRAMBLED WORD -->
+
+            <div
+                id="scrambledWord"
+                class="scrambled-word"
+            >
+            </div>
+
+
+
+            <!-- ANSWER -->
+
+            <input
+                type="text"
+                id="answer"
+                class="answer-input"
+                placeholder="Enter your answer"
+                autocomplete="off"
+            >
+
+
+
+            <!-- BUTTONS -->
+
+            <div class="game-buttons">
+
+                <button
+                    onclick="checkAnswer()"
+                    class="check-btn"
+                >
+                    ✓ Check Answer
+                </button>
+
+
+                <button
+                    onclick="showHint()"
+                    class="hint-btn"
+                >
+                    💡 Hint
+                </button>
+
+            </div>
+
+
+
+            <!-- HINT -->
+
+            <div
+                id="hintBox"
+                class="hint-box hidden"
+            >
+
+                💡
+
+                <span id="hint">
+                    Hint will appear here.
+                </span>
+
+            </div>
+
+
+
+            <!-- RESULT -->
+
+            <div
+                id="result"
+                class="answer-result"
+            >
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>

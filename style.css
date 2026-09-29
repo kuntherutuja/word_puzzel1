@@ -1,0 +1,1498 @@
+/* =====================================================
+   WORD PUZZLE - MAIN STYLE
+   ===================================================== */
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #172554;
+
+    background: #f5f7ff;
+}
+
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   LOGIN PAGE
+   ===================================================== */
+
+.login-page {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #e0e7ff,
+            #f5f3ff
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+.login-wrapper {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: white;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(60, 50, 150, 0.15);
+}
+
+
+/* ---------- LOGIN LEFT ---------- */
+
+.login-visual {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #c7d2fe,
+            #ddd6fe
+        );
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.brand {
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    color: #14245f;
+
+    z-index: 2;
+}
+
+
+.brand-purple {
+    color: #6d4aff;
+}
+
+
+.visual-content {
+
+    margin: auto;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+
+.bulb {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+
+.word-block {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+.word-block span {
+
+    background: #ffd166;
+
+    color: #16235b;
+
+    font-weight: 900;
+
+    font-size: 28px;
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 10px rgba(0,0,0,0.12);
+}
+
+
+.word-block.second {
+    margin-top: 7px;
+}
+
+
+.visual-content p {
+
+    margin-top: 30px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    font-weight: 600;
+
+    color: #303d78;
+}
+
+
+.visual-decoration {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: .4;
+}
+
+
+.circle-one {
+
+    width: 280px;
+
+    height: 280px;
+
+    background: #a78bfa;
+
+    right: -120px;
+
+    bottom: -100px;
+}
+
+
+.circle-two {
+
+    width: 180px;
+
+    height: 180px;
+
+    background: #60a5fa;
+
+    left: -80px;
+
+    bottom: 30px;
+}
+
+
+/* ---------- LOGIN RIGHT ---------- */
+
+.login-section {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px;
+}
+
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 390px;
+}
+
+
+.login-card h1 {
+
+    font-size: 34px;
+
+    color: #14245f;
+
+    margin-bottom: 10px;
+}
+
+
+.login-subtitle {
+
+    color: #7b8197;
+
+    margin-bottom: 30px;
+
+    line-height: 1.5;
+}
+
+
+.login-card > form > label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    margin-top: 18px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #293566;
+}
+
+
+.input-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border: 1px solid #dbe1f0;
+
+    border-radius: 10px;
+
+    padding: 0 14px;
+
+    height: 50px;
+
+    transition: .2s;
+}
+
+
+.input-box:focus-within {
+
+    border-color: #6d4aff;
+
+    box-shadow:
+        0 0 0 3px rgba(109, 74, 255, .1);
+}
+
+
+.input-box input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+.terms {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin: 20px 0;
+
+    font-size: 12px;
+
+    color: #70768a;
+
+    line-height: 1.5;
+}
+
+
+.terms input {
+
+    margin-top: 3px;
+}
+
+
+.terms a {
+
+    color: #5d45e8;
+
+    font-weight: 600;
+}
+
+
+.primary-btn {
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 14px 25px;
+
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5548ef,
+            #7c4dff
+        );
+
+    box-shadow:
+        0 8px 20px rgba(91, 72, 239, .25);
+
+    transition: .2s;
+}
+
+
+.primary-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(91, 72, 239, .35);
+}
+
+
+.login-btn {
+
+    width: 100%;
+}
+
+
+.create-account {
+
+    text-align: center;
+
+    margin-top: 22px;
+
+    font-size: 13px;
+
+    color: #777d91;
+}
+
+
+.create-account a {
+
+    color: #5548ef;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.message {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.main-page {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7f8ff,
+            #eef2ff
+        );
+}
+
+
+.navbar {
+
+    height: 72px;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 6%;
+
+    border-bottom: 1px solid #e8ebf5;
+}
+
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    color: #16245d;
+}
+
+
+.logo span {
+
+    color: #6549ee;
+}
+
+
+.nav-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.user-info {
+
+    color: #596078;
+
+    font-size: 13px;
+}
+
+
+.score-display {
+
+    font-size: 14px;
+
+    color: #39405a;
+}
+
+
+.score-display strong {
+
+    color: #6549ee;
+}
+
+
+.profile-icon {
+
+    width: 36px;
+
+    height: 36px;
+
+    background: #eef2ff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.logout-btn {
+
+    border: none;
+
+    background: #ff5271;
+
+    color: white;
+
+    padding: 9px 16px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   DASHBOARD
+   ===================================================== */
+
+.dashboard {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 45px 25px;
+}
+
+
+.welcome-card {
+
+    background:
+        linear-gradient(
+            110deg,
+            #ffffff,
+            #f0f3ff
+        );
+
+    min-height: 230px;
+
+    border-radius: 20px;
+
+    padding: 40px 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow:
+        0 8px 25px rgba(35, 42, 100, .08);
+}
+
+
+.welcome-text h1 {
+
+    font-size: 30px;
+
+    color: #14245f;
+
+    margin-bottom: 10px;
+}
+
+
+.welcome-text p {
+
+    color: #747b91;
+
+    margin-bottom: 25px;
+}
+
+
+.start-game-btn {
+
+    padding: 13px 28px;
+}
+
+
+.welcome-image {
+
+    width: 220px;
+
+    height: 160px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.brain {
+
+    font-size: 75px;
+}
+
+
+.books {
+
+    position: absolute;
+
+    font-size: 55px;
+
+    bottom: 0;
+
+    right: 10px;
+}
+
+
+.sparkle {
+
+    position: absolute;
+
+    top: 5px;
+
+    right: 30px;
+
+    font-size: 30px;
+}
+
+
+/* ---------- LEVELS ---------- */
+
+.levels-section {
+
+    margin-top: 40px;
+}
+
+
+.section-heading {
+
+    margin-bottom: 22px;
+}
+
+
+.section-heading h2 {
+
+    color: #18265f;
+
+    font-size: 24px;
+
+    margin-bottom: 7px;
+}
+
+
+.section-heading p {
+
+    color: #7a8197;
+
+    font-size: 14px;
+}
+
+
+.level-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.level-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(35, 42, 100, .08);
+
+    border: 1px solid #edf0fa;
+
+    transition: .2s;
+}
+
+
+.level-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(35, 42, 100, .12);
+}
+
+
+.level-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.level-card h3 {
+
+    color: #19265d;
+
+    margin-bottom: 8px;
+}
+
+
+.difficulty {
+
+    display: inline-block;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+.easy {
+
+    color: #079b68;
+
+    background: #d9f8eb;
+}
+
+
+.medium {
+
+    color: #d78200;
+
+    background: #fff0ca;
+}
+
+
+.hard {
+
+    color: #6841d9;
+
+    background: #e9ddff;
+}
+
+
+.level-card p {
+
+    color: #777e94;
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+
+.level-card > span {
+
+    display: block;
+
+    color: #8a90a1;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.level-btn {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 9px;
+
+    color: white;
+
+    font-weight: 700;
+}
+
+
+.easy-btn {
+
+    background: #20bb82;
+}
+
+
+.medium-btn {
+
+    background: #f5a900;
+}
+
+
+.hard-btn {
+
+    background: #6841d9;
+}
+
+
+/* =====================================================
+   GAME PAGE
+   ===================================================== */
+
+.game-page {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 35px 20px;
+}
+
+
+.game-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.round-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.round-label {
+
+    background: #16ae78;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.question-info {
+
+    text-align: right;
+
+    color: #596078;
+
+    font-size: 13px;
+
+    min-width: 180px;
+}
+
+
+.progress-bar {
+
+    height: 6px;
+
+    background: #e4e8f4;
+
+    border-radius: 10px;
+
+    margin-top: 8px;
+
+    overflow: hidden;
+}
+
+
+.progress-fill {
+
+    height: 100%;
+
+    width: 20%;
+
+    background: #18b67d;
+
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+
+/* ---------- PUZZLE CARD ---------- */
+
+.puzzle-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(35, 42, 100, .08);
+}
+
+
+.puzzle-card h1 {
+
+    color: #17245d;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+
+.instruction {
+
+    color: #858ba0;
+
+    font-size: 13px;
+
+    margin-bottom: 30px;
+}
+
+
+.scrambled-word {
+
+    min-height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f1f3ff,
+            #f7f8ff
+        );
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #6146ed;
+
+    letter-spacing: 3px;
+}
+
+
+.letter-tile {
+
+    width: 48px;
+
+    height: 48px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6348ed,
+            #8057f5
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 12px rgba(100, 70, 230, .2);
+}
+
+
+.answer-input {
+
+    width: 100%;
+
+    height: 52px;
+
+    border: 1px solid #dce1ef;
+
+    border-radius: 9px;
+
+    padding: 0 18px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+.answer-input:focus {
+
+    border-color: #6848ee;
+
+    box-shadow:
+        0 0 0 3px rgba(104,72,238,.1);
+}
+
+
+.game-buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 180px;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+
+.check-btn,
+.hint-btn {
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+
+.check-btn {
+
+    background:
+        linear-gradient(
+            90deg,
+            #5747ef,
+            #794ff3
+        );
+
+    color: white;
+}
+
+
+.hint-btn {
+
+    background: #ffbe2e;
+
+    color: #493600;
+}
+
+
+.hint-box {
+
+    background: #fff7d9;
+
+    border: 1px solid #ffe39a;
+
+    color: #8b6900;
+
+    margin-top: 20px;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    text-align: left;
+
+    font-size: 13px;
+}
+
+
+.hidden {
+
+    display: none;
+}
+
+
+.answer-result {
+
+    min-height: 30px;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.correct {
+
+    color: #0c9b66;
+}
+
+
+.wrong {
+
+    color: #ed3e5b;
+}
+
+
+/* =====================================================
+   WINNER PAGE
+   ===================================================== */
+
+.winner-page {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #252c91,
+            #5634c9,
+            #702bd8
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.winner-card {
+
+    width: 100%;
+
+    max-width: 560px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.25);
+}
+
+
+.trophy {
+
+    font-size: 75px;
+
+    margin-bottom: 10px;
+}
+
+
+.winner-card h1 {
+
+    color: #17245e;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+.winner-card h2 {
+
+    color: #6145df;
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+
+.winner-card p {
+
+    color: #7b8195;
+
+    font-size: 14px;
+}
+
+
+.final-score {
+
+    background: #f3f5ff;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    margin: 25px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #747a91;
+}
+
+
+.final-score strong {
+
+    font-size: 32px;
+
+    color: #5b43df;
+}
+
+
+.winner-buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+
+.outline-btn {
+
+    background: white;
+
+    border: 1px solid #6a4df0;
+
+    color: #6145df;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+}
+
+
+.winner-decoration {
+
+    position: absolute;
+
+    color: white;
+
+    opacity: .8;
+
+    font-size: 35px;
+}
+
+
+.decoration-1 {
+
+    top: 15%;
+
+    left: 15%;
+}
+
+
+.decoration-2 {
+
+    top: 25%;
+
+    right: 15%;
+}
+
+
+.decoration-3 {
+
+    bottom: 15%;
+
+    left: 20%;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .login-wrapper {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .login-visual {
+
+        min-height: 300px;
+
+    }
+
+
+    .login-section {
+
+        padding: 35px 25px;
+
+    }
+
+
+    .level-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .welcome-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+
+    }
+
+
+    .game-top {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        align-items: stretch;
+
+    }
+
+
+    .question-info {
+
+        text-align: left;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding: 0 15px;
+
+    }
+
+
+    .user-info {
+
+        display: none;
+
+    }
+
+
+    .logout-btn {
+
+        padding: 8px 11px;
+
+    }
+
+
+    .dashboard {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .welcome-card {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .puzzle-card {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .game-buttons {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .winner-card {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .winner-buttons {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .word-block span {
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 21px;
+
+    }
+
+
+    .scrambled-word {
+
+        gap: 5px;
+
+        font-size: 22px;
+
+    }
+
+}
